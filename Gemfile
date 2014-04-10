@@ -1,7 +1,6 @@
 source "https://rubygems.org"
 
 gem 'sinatra'
-gem 'sinatra/reloader'
 gem "sass"
 gem "haml"
 gem "coffee-script"
