@@ -1,11 +1,8 @@
 source "https://rubygems.org"
 
+ruby '2.1.1'
 gem 'sinatra'
-gem "sass"
-gem "haml"
-gem "coffee-script"
-gem "shotgun"
-
-group :test do
-  gem 'rspec'
-end
+gem 'sinatra-contrib'
+gem 'sass'
+gem 'haml'
+gem 'coffee-script'
