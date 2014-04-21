@@ -59,7 +59,11 @@ class Server < Sinatra::Base
 
   # ファイルアップロード
   post '/send' do
-
     redirect "/upload/#{session[:id]}"
+  end
+
+  # 任意のURLは/loginにredirect
+  get '/*' do
+    redirect '/login'
   end
 end
