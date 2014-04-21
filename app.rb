@@ -13,7 +13,7 @@ class Server < Sinatra::Base
 
   # ログイン画面
   get '/login' do
-    if session[:value] == 'view':
+    if session[:value] == 'view'
       redirect '/main'
     elsif session[:value] == 'upload'
       redirect "/upload/#{session[:id]}"
