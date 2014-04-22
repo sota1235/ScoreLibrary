@@ -1,6 +1,6 @@
 #header
   %h1 Score Library
-  = Haml::Engine.new(File.read('logout.haml')).render
+  = Haml::Engine.new(File.read('./views/logout.haml')).render
 #upload
   %form(action="/upload/#{@user}" method='POST')
     %label 投稿者
