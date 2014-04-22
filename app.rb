@@ -39,6 +39,13 @@ class Server < Sinatra::Base
     end
   end
 
+  # ログアウト
+  post '/logout' do
+    session[:value] = nil
+    session[:id] - nil
+    redirect '/login'
+  end
+
   # 閲覧用楽譜ページ
   get '/main' do
     redirect '/login' if session[:value] == nil
