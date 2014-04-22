@@ -6,17 +6,17 @@
   -# 楽譜のタグリスト
   %form
     %label ジャンル
-      %select(name='type')
-        %option(value='none') 指定なし
-        %option(value='japan') 邦楽
-        %option(value='en') 洋楽
-        %option(value='other') その他
+    %select(name='type')
+      %option(value='none') 指定なし
+      %option(value='japan') 邦楽
+      %option(value='en') 洋楽
+      %option(value='other') その他
     %label 人数
-      %select(name='peaple-num')
-        %option(value='none') 指定なし
-        %option(value='four') 4人
-        %option(value='five') 5人
-        %option(value='six') 6人
-        %option(value='over-seven') 7人以上
+    %select(name='peaple-num')
+      %option(value='none') 指定なし
+      %option(value='four') 4人
+      %option(value='five') 5人
+      %option(value='six') 6人
+      %option(value='over-seven') 7人以上
 #scores
   #{@score}
