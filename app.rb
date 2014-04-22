@@ -26,7 +26,7 @@ class Server < Sinatra::Base
   post '/login' do
     flag = check_date(params[:id],params[:pass])
     if flag != False
-      if flag == "view"
+      if flag == 'view'
         session[:value] = 'view'
         redirect '/main'
       else
