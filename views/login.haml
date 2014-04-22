@@ -3,11 +3,9 @@
   You can get and upload scores.
 %form(action='/login' method='POST')
   %p
-    %input(type='text' class='form-control login-field' value placeholder='Enter your name' id='login-name')
-    %label(class='login-field-icon fui-user' for='login-name')
+    %input(type='text' value placeholder='Enter your name' name='id')
   %p
-    %input(type='password' class='form-control login-field' value placeholder='password' id='login-pass')
-    %label(class='login-field-icon fui-lock' for='login-pass')
+    %input(type='password' value placeholder='password' name='pass')
   %p
     %input(type='submit' value='Login')
   %p
