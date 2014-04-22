@@ -61,6 +61,8 @@ class Server < Sinatra::Base
 
   # アップロードページ
   get '/upload/:user' do
+    redirect '/login' if session[:value] == nil
+    redirect '/main' if session[:id] == nil
     haml :upload
   end
 
