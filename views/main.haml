@@ -1,0 +1,20 @@
+#header
+  %h1 Score Library
+#search
+  %input(type='text',value placeholder='Enter keyword')
+  -# 楽譜のタグリスト
+  %form
+    %label
+      %select(name='type')
+        %option(value='none') 指定なし
+        %option(value='japan') 邦楽
+        %option(value='en') 洋楽
+        %option(value='other') その他
+      %select(name='peaple-num')
+        %option(value='none') 指定なし
+        %option(value='four') 4人
+        %option(value='five') 5人
+        %option(value='six') 6人
+        %option(value='over-seven') 7人以上
+#scores
+  #{@score}
