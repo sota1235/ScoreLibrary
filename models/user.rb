@@ -1,7 +1,7 @@
 class User
   # パスワードチェック
-  def check_pass
-
+  def check_pass(id, pass)
+    return 'view'
   end
 
   # ユーザ作成

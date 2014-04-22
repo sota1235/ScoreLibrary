@@ -13,9 +13,9 @@ class Server < Sinatra::Base
 
   # ログイン画面
   get '/login' do
-    if session[:value] == 'view'
+    if session[:value] == 'view' then
       redirect '/main'
-    elsif session[:value] == 'upload'
+    elsif session[:value] == 'upload' then
       redirect "/upload/#{session[:id]}"
     else
       haml :login
@@ -24,9 +24,10 @@ class Server < Sinatra::Base
 
   # ログイン情報送信
   post '/login' do
-    flag = check_date(params[:id],params[:pass])
-    if flag != False
-      if flag == 'view'
+    @user = User.new
+    flag = @user.check_pass(params[:id],params[:pass])
+    if flag != false then
+      if flag == 'view' then
         session[:value] = 'view'
         redirect '/main'
       else
