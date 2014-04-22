@@ -1,6 +1,6 @@
 #header
   %h1 Score Library
-  = haml :'./logout.haml'
+  = Haml::Engine.new(File.read("logout.haml")).render
 #search
   %input(type='text' value placeholder='Enter keyword')
   -# 楽譜のタグリスト
