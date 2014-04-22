@@ -1,10 +1,14 @@
 #header
   %h1 Score Library
   = haml :'./logout.haml'
-#search
-  %input(type='text',value placeholder='Enter keyword')
-  -# 楽譜のタグリスト
-  %form
+#upload
+  %form(action="/upload/#{@user}",method='POST')
+    %label 投稿者
+      %p #{@user}
+    %label タイトル
+      %input(type='text',name='song-name')
+    %label 作曲者
+      %input(type='text',name='song-writer')
     %label ジャンル
       %select(name='type')
         %option(value='none') 指定なし
@@ -13,10 +17,8 @@
         %option(value='other') その他
     %label 人数
       %select(name='peaple-num')
-        %option(value='none') 指定なし
         %option(value='four') 4人
         %option(value='five') 5人
         %option(value='six') 6人
         %option(value='over-seven') 7人以上
-#scores
-  #{@score}
+    %input(type='submit',value='Upload')
