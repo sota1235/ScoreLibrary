@@ -41,13 +41,13 @@ class Server < Sinatra::Base
 
   # 閲覧用楽譜ページ
   get '/main' do
-    redirect '/login' if session[:value] = nil
+    redirect '/login' if session[:value] == nil
     haml :main
   end
 
   # 楽譜ページ
   get '/main/:score' do
-    redirect '/login' if session[:value] = nil
+    redirect '/login' if session[:value] == nil
     # なんらかのモデル
     haml :score
   end
