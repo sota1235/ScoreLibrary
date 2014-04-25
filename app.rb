@@ -43,7 +43,7 @@ class Server < Sinatra::Base
   # ログアウト
   post '/logout' do
     session[:value] = nil
-    session[:id] - nil
+    session[:id] = nil
     redirect '/login'
   end
 
